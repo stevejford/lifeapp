@@ -2,9 +2,9 @@
 
 import { useState, ChangeEvent } from 'react'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from 'components/ui/button'
+import { Input } from 'components/ui/input'
+import { Label } from 'components/ui/label'
 
 export default function CreateLifeStory() {
   const [givenName, setGivenName] = useState('')
@@ -18,7 +18,7 @@ export default function CreateLifeStory() {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div className="flex flex-1 flex-col justify-center px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div className="text-center">
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Life Story</h2>
@@ -84,9 +84,9 @@ export default function CreateLifeStory() {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block relative w-0 flex-1">
+      <div className="relative hidden w-0 flex-1 lg:block">
         <Image
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 size-full object-cover"
           src="/new-lifestory-cover.jpg"
           alt="Life Story Cover"
           layout="fill"

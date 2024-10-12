@@ -10,10 +10,10 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold mb-8">Dashboard</h1>
-      <p className="text-xl mb-4">Welcome to your Memorial App dashboard, {user.firstName}!</p>
+      <h1 className="mb-8 text-4xl font-bold">Dashboard</h1>
+      <p className="mb-4 text-xl">Welcome to your Memorial App dashboard, {user.firstName}!</p>
       <p className="text-lg">Here you can manage your memorials and life stories.</p>
-      <p className="text-sm mt-4">User ID: {user.id}</p>
+      <p className="mt-4 text-sm">User ID: {user.id}</p>
     </div>
   );
 }

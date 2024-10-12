@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckIcon } from "lucide-react"
 import Image from "next/image"
 
@@ -28,63 +28,63 @@ export default function CreateMemory() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 className="text-2xl font-semibold text-center mb-8 text-gray-800">What would you like to create?</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <h2 className="mb-8 text-center text-2xl font-semibold text-gray-800">What would you like to create?</h2>
+      <div className="grid gap-6 md:grid-cols-2">
         <Card 
-          className={`overflow-hidden cursor-pointer transition-all duration-200 ${
+          className={`cursor-pointer overflow-hidden transition-all duration-200 ${
             selectedMemory === "Online Memorial" ? "ring-2 ring-blue-500" : ""
           }`}
           onClick={() => handleSelect("Online Memorial")}
         >
-          <CardHeader className="p-0 relative">
+          <CardHeader className="relative p-0">
             <Image
               src="/memorial-selection.png"
               alt="Online Memorial"
               width={300}
               height={200}
-              className="w-full h-48 object-cover"
+              className="size-48 object-cover"
             />
             {selectedMemory === "Online Memorial" && (
-              <div className="absolute top-2 right-2 bg-blue-500 rounded-full p-1">
-                <CheckIcon className="h-4 w-4 text-white" />
+              <div className="absolute right-2 top-2 rounded-full bg-blue-500 p-1">
+                <CheckIcon className="size-4 text-white" />
               </div>
             )}
           </CardHeader>
           <CardContent className="p-4">
-            <CardTitle className="text-lg font-semibold mb-2">Online Memorial</CardTitle>
-            <p className="text-sm text-gray-600">Honor and remember a loved one's memory.</p>
+            <CardTitle className="mb-2 text-lg font-semibold">Online Memorial</CardTitle>
+            <p className="text-sm text-gray-600">Honor and remember a loved one&apos;s memory.</p>
           </CardContent>
         </Card>
         <Card 
-          className={`overflow-hidden cursor-pointer transition-all duration-200 ${
+          className={`cursor-pointer overflow-hidden transition-all duration-200 ${
             selectedMemory === "Life story" ? "ring-2 ring-blue-500" : ""
           }`}
           onClick={() => handleSelect("Life story")}
         >
-          <CardHeader className="p-0 relative">
+          <CardHeader className="relative p-0">
             <Image
               src="/lifestory-selection.png"
               alt="Life story"
               width={300}
               height={200}
-              className="w-full h-48 object-cover"
+              className="size-48 object-cover"
             />
             {selectedMemory === "Life story" && (
-              <div className="absolute top-2 right-2 bg-blue-500 rounded-full p-1">
-                <CheckIcon className="h-4 w-4 text-white" />
+              <div className="absolute right-2 top-2 rounded-full bg-blue-500 p-1">
+                <CheckIcon className="size-4 text-white" />
               </div>
             )}
           </CardHeader>
           <CardContent className="p-4">
-            <CardTitle className="text-lg font-semibold mb-2">Life story</CardTitle>
+            <CardTitle className="mb-2 text-lg font-semibold">Life story</CardTitle>
             <p className="text-sm text-gray-600">Ensure your story is remembered for generations to come.</p>
           </CardContent>
         </Card>
       </div>
       <div className="mt-8 flex justify-center">
         <Button 
-          className="w-full sm:w-auto px-8 py-2"
+          className="w-full px-8 py-2 sm:w-auto"
           onClick={handleContinue}
           disabled={!selectedMemory}
         >
