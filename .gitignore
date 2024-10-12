@@ -1096,3 +1096,6 @@ yarn-cache/
 *.VC.VC.sdf
 *.VC.VC.log
 *.VC.VC.idb
+
+# Local Netlify folder
+.netlify
